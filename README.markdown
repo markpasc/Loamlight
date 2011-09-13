@@ -1,5 +1,5 @@
-Limelight — A LimeChat theme
+Loamlight — A LimeChat theme
 
 LimeChat: http://limechat.net/mac/
 
-![Preview image](http://cloud.github.com/downloads/Soryu/Limelight/limelight.png)
+Original Limelight: https://github.com/Soryu/Limelight
