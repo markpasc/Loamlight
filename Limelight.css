@@ -160,37 +160,3 @@ body.normal .sender[type=myself]:after {
 
 .effect[color-number] { color: inherit; background-color: inherit; font-style: italic; }
 
-/* Icons/logos for some popular apps/channels */
-
-html[channelname="#limechat"].normal,
-html[channelname="##limechat"].normal {
-	background: #202020 url('Limelight/limechat.png') no-repeat fixed bottom right;
-}
-
-html[channelname="##textmate"].normal {
-	background: #202020 url('Limelight/textmate.png') no-repeat fixed bottom right;
-}
-
-html[channelname="#adium"].normal {
-	background: #202020 url('Limelight/adium.png') no-repeat fixed bottom right;
-}
-
-html[channelname="#colloquy"].normal {
-	background: #202020 url('Limelight/colloquy.png') no-repeat fixed bottom right;
-}
-
-html[channelname="#growl"].normal {
-	background: #202020 url('Limelight/growl.png') no-repeat fixed bottom right;
-}
-html[channelname="#ruby"].normal {
-	background: #202020 url('Limelight/ruby.png') no-repeat fixed bottom right;
-}
-html[channelname="#rubyonrails"].normal {
-	background: #202020 url('Limelight/rubyonrails.png') no-repeat fixed bottom right;
-}
-html[channelname="##apple"].normal {
-	background: #202020 url('Limelight/apple.png') no-repeat fixed bottom right;
-}
-html[channelname="#python"].normal {
-	background: #202020 url('Limelight/python.png') no-repeat fixed bottom right;
-}
