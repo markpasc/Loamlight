@@ -36,7 +36,7 @@ a {
 /* Nicks */
 
 .sender[type=normal] { color: #c4af75; font-weight: bold; margin-right: 1.5ex; }
-.sender[type=myself] { color: #8996A8; font-weight: bold; margin-right: 1.5ex; }
+.sender[type=myself] { color: #33c4fa; font-weight: bold; margin-right: 1.5ex; }
 
 /* Messages */
 
@@ -125,7 +125,6 @@ body.normal div.line[type=action] .sender[type=normal], div.line[type=action] .s
 	width: auto;
 	padding-left: 19ex;
 	margin-right: 1ex;
-	color: #8996A8;
 	background-color: transparent;
 }
 
@@ -135,6 +134,23 @@ body.normal div.line[type=action] .sender[type=normal]::before, div.line[type=ac
 }
 
 
+.sender[type=normal][colornumber='0'],
+.sender[type=normal][colornumber='8'] { color: #00dc49; }
+.sender[type=normal][colornumber='1'],
+.sender[type=normal][colornumber='9'] { color: #92fcfe; }
+.sender[type=normal][colornumber='2'],
+.sender[type=normal][colornumber='10'] { color: #f1ee4f; }
+.sender[type=normal][colornumber='3'],
+.sender[type=normal][colornumber='11'] { color: #f2872f; }
+.sender[type=normal][colornumber='4'],
+.sender[type=normal][colornumber='12'] { color: #fc6433; }
+.sender[type=normal][colornumber='5'],
+.sender[type=normal][colornumber='13'] { color: #f0f0f0; }
+.sender[type=normal][colornumber='6'],
+.sender[type=normal][colornumber='14'] { color: #9c749b; }
+.sender[type=normal][colornumber='7'],
+.sender[type=normal][colornumber='15'] { color: #eb8798; }
+
 body.normal .line[highlight=true] > .sender[type=normal] {
 	margin-left: -1ex;
 	padding-left: 0.2ex;
@@ -142,18 +158,38 @@ body.normal .line[highlight=true] > .sender[type=normal] {
 	-webkit-border-top-right-radius: 3px;
 	-webkit-border-bottom-right-radius: 3px;
 	line-height:3ex;
-	background-color: #3B434C;
-/*	background-color: #48515C;*/
-	color: #CF6A4C;
+	color: #202020;
 }
+
+.line[highlight=true] .sender[type=normal][colornumber='0'],
+.line[highlight=true] .sender[type=normal][colornumber='8'] { background-color: #00dc49; }
+.line[highlight=true] .sender[type=normal][colornumber='1'],
+.line[highlight=true] .sender[type=normal][colornumber='9'] { background-color: #92fcfe; }
+.line[highlight=true] .sender[type=normal][colornumber='2'],
+.line[highlight=true] .sender[type=normal][colornumber='10'] { background-color: #f1ee4f; }
+.line[highlight=true] .sender[type=normal][colornumber='3'],
+.line[highlight=true] .sender[type=normal][colornumber='11'] { background-color: #f2872f; }
+.line[highlight=true] .sender[type=normal][colornumber='4'],
+.line[highlight=true] .sender[type=normal][colornumber='12'] { background-color: #fc6433; }
+.line[highlight=true] .sender[type=normal][colornumber='5'],
+.line[highlight=true] .sender[type=normal][colornumber='13'] { background-color: #f0f0f0; }
+.line[highlight=true] .sender[type=normal][colornumber='6'],
+.line[highlight=true] .sender[type=normal][colornumber='14'] { background-color: #9c749b; }
+.line[highlight=true] .sender[type=normal][colornumber='7'],
+.line[highlight=true] .sender[type=normal][colornumber='15'] { background-color: #eb8798; }
 
 body.normal .sender[type=myself]:after {
 	content: " ★";
-	color: #6E7B8D;
+	color: #33c4fa;
 }
 
 .line[highlight=true] {
 	background-color: transparent;
+}
+
+.line[highlight=true] .highlight {
+	color: #33c4fa;
+	font-weight: bold;
 }
 
 /* disable funky mirc colours */
