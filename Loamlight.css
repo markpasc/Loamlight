@@ -134,6 +134,13 @@ body.normal div.line[type=action] .sender[type=normal]::before, div.line[type=ac
 	padding-right: 1.5ex;
 }
 
+div.line[type=action] .sender[type=myself]::before {
+    content: "★";
+}
+
+div.line[type=action] .sender[type=myself] {
+    padding-left: 13.5ex;
+}
 
 .sender[type=normal][colornumber='0'],
 .sender[type=normal][colornumber='8'] { color: #00dc49; }
@@ -182,6 +189,10 @@ body.normal .line[highlight=true] > .sender[type=normal] {
 body.normal .sender[type=myself]:after {
 	content: " ★";
 	color: #33c4fa;
+}
+
+body.normal div.line[type=action] .sender[type=myself]:after {
+    content: "";
 }
 
 .line[highlight=true] {
