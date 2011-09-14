@@ -114,7 +114,8 @@ body.normal .line:hover .time {
 	visibility: visible;
 }
 
-body.normal .sender[type=normal], body.normal .sender[type=myself] {
+body.normal .sender,
+body.normal div.line[type=action] .sender:before {
 	display: block;
 	float: left;
 	padding-right: 0.3ex;
@@ -124,24 +125,19 @@ body.normal .sender[type=normal], body.normal .sender[type=myself] {
 	overflow: hidden;
 }
 
-body.normal div.line[type=action] .sender[type=normal], div.line[type=action] .sender[type=myself] {
+body.normal div.line[type=action] .sender {
 	width: auto;
-	padding-left: 14ex;
 	margin-right: 1ex;
-	background-color: transparent;
 }
 
-body.normal div.line[type=action] .sender[type=normal]::before, div.line[type=action] .sender[type=myself]::before {
+body.normal div.line[type=action] .sender:before {
 	content: "•";
-	padding-right: 1.5ex;
+	padding-right: 0.3ex;
+	margin-right: 1.5ex;
 }
 
-div.line[type=action] .sender[type=myself]::before {
-    content: "★";
-}
-
-div.line[type=action] .sender[type=myself] {
-    padding-left: 13.5ex;
+div.line[type=action] .sender[type=myself]:before {
+	content: "★";
 }
 
 .sender[type=normal][colornumber='0'],
