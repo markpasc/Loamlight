@@ -106,8 +106,10 @@ body.normal .message[type=debug_receive]    { padding-left: 17ex; }
 
 body.normal .time {
 	display: block;
-	float: right;
-	padding-left: 1ex;
+	position: absolute;
+	right: 0;
+	background: #202020;
+	padding: 0 1ex;
 	visibility: hidden;
 }
 body.normal .line:hover .time {
