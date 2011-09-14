@@ -115,7 +115,7 @@ body.normal div.line[type=action] .sender:before {
 	margin-right: 1.5ex;
 }
 
-div.line[type=action] .sender[type=myself]:before {
+body.normal div.line[type=action] .sender[type=myself]:before {
 	content: "★";
 }
 
