@@ -106,7 +106,12 @@ body.normal div.line[type=action] .sender:before {
 
 body.normal div.line[type=action] .sender {
 	width: auto;
-	margin-right: 1ex;
+	margin-right: 0;
+}
+
+body.normal div.line[type=action] .sender:after {
+	display: inline;
+	content: "​ ";  /* U+200B ZERO WIDTH SPACE + U+0020 SPACE */
 }
 
 body.normal div.line[type=action] .sender:before {
@@ -169,7 +174,7 @@ body.normal .sender[type=myself]:after {
 }
 
 body.normal div.line[type=action] .sender[type=myself]:after {
-    content: "";
+	content: "​ ";  /* U+200B ZERO WIDTH SPACE + U+0020 SPACE */
 }
 
 .line[highlight=true] {
