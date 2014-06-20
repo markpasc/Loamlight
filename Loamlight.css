@@ -77,20 +77,14 @@ a {
 }
 
 /* Messages in main view, but not console */
-body.normal .message { padding-left: 17ex; display: block; }
+body.normal .message { padding-left: 23ex; display: block; }
 
 /* Spans in line */
 
 body.normal .time {
 	display: block;
-	position: absolute;
-	right: 0;
-	background: #202020;
-	padding: 0 1ex;
-	visibility: hidden;
-}
-body.normal .line:hover .time {
-	visibility: visible;
+	float: left;
+	width: 6ex;
 }
 
 body.normal .sender,
@@ -141,32 +135,45 @@ body.normal div.line[type=action] .sender[type=myself]:before {
 .sender[type=normal][colornumber='7'],
 .sender[type=normal][colornumber='15'] { color: #eb8798; }
 
-body.normal .line[highlight=true] > .sender[type=normal] {
-	margin-left: -1ex;
-	padding-left: 0.2ex;
-	padding-right: 0.8ex;
-	-webkit-border-top-right-radius: 3px;
-	-webkit-border-bottom-right-radius: 3px;
+body.normal .line[highlight=true][type=privmsg] > .sender[type=normal],
+body.normal .line[highlight=true][type=action] > .sender[type=normal]:before {
+	-webkit-border-radius: 3px;
 	line-height:3ex;
 	color: #202020;
 }
 
-.line[highlight=true] .sender[type=normal][colornumber='0'],
-.line[highlight=true] .sender[type=normal][colornumber='8'] { background-color: #00dc49; }
-.line[highlight=true] .sender[type=normal][colornumber='1'],
-.line[highlight=true] .sender[type=normal][colornumber='9'] { background-color: #92fcfe; }
-.line[highlight=true] .sender[type=normal][colornumber='2'],
-.line[highlight=true] .sender[type=normal][colornumber='10'] { background-color: #f1ee4f; }
-.line[highlight=true] .sender[type=normal][colornumber='3'],
-.line[highlight=true] .sender[type=normal][colornumber='11'] { background-color: #f2872f; }
-.line[highlight=true] .sender[type=normal][colornumber='4'],
-.line[highlight=true] .sender[type=normal][colornumber='12'] { background-color: #fc6433; }
-.line[highlight=true] .sender[type=normal][colornumber='5'],
-.line[highlight=true] .sender[type=normal][colornumber='13'] { background-color: #f0f0f0; }
-.line[highlight=true] .sender[type=normal][colornumber='6'],
-.line[highlight=true] .sender[type=normal][colornumber='14'] { background-color: #9c749b; }
-.line[highlight=true] .sender[type=normal][colornumber='7'],
-.line[highlight=true] .sender[type=normal][colornumber='15'] { background-color: #eb8798; }
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='0'],
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='8'] { background-color: #00dc49; }
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='1'],
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='9'] { background-color: #92fcfe; }
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='2'],
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='10'] { background-color: #f1ee4f; }
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='3'],
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='11'] { background-color: #f2872f; }
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='4'],
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='12'] { background-color: #fc6433; }
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='5'],
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='13'] { background-color: #f0f0f0; }
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='6'],
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='14'] { background-color: #9c749b; }
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='7'],
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='15'] { background-color: #eb8798; }
+.line[highlight=true][type=action] .sender[type=normal][colornumber='0']:before,
+.line[highlight=true][type=action] .sender[type=normal][colornumber='8']:before { background-color: #00dc49; }
+.line[highlight=true][type=action] .sender[type=normal][colornumber='1']:before,
+.line[highlight=true][type=action] .sender[type=normal][colornumber='9']:before { background-color: #92fcfe; }
+.line[highlight=true][type=action] .sender[type=normal][colornumber='2']:before,
+.line[highlight=true][type=action] .sender[type=normal][colornumber='10']:before { background-color: #f1ee4f; }
+.line[highlight=true][type=action] .sender[type=normal][colornumber='3']:before,
+.line[highlight=true][type=action] .sender[type=normal][colornumber='11']:before { background-color: #f2872f; }
+.line[highlight=true][type=action] .sender[type=normal][colornumber='4']:before,
+.line[highlight=true][type=action] .sender[type=normal][colornumber='12']:before { background-color: #fc6433; }
+.line[highlight=true][type=action] .sender[type=normal][colornumber='5']:before,
+.line[highlight=true][type=action] .sender[type=normal][colornumber='13']:before { background-color: #f0f0f0; }
+.line[highlight=true][type=action] .sender[type=normal][colornumber='6']:before,
+.line[highlight=true][type=action] .sender[type=normal][colornumber='14']:before { background-color: #9c749b; }
+.line[highlight=true][type=action] .sender[type=normal][colornumber='7']:before,
+.line[highlight=true][type=action] .sender[type=normal][colornumber='15']:before { background-color: #eb8798; }
 
 body.normal .sender[type=myself]:after {
 	content: " ★";
