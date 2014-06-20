@@ -1,36 +1,36 @@
 html {
-	font-family: "Lucida Grande", sans-serif;
-	font-size: 9pt;
-	background-color: #202020;
-	color: #FFFFFF;
-	padding: 0;
-	margin: 0;
+    font-family: "Lucida Grande", sans-serif;
+    font-size: 9pt;
+    background-color: #202020;
+    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-	margin: 0;
-	padding: 0.5ex 1.5ex;
+    margin: 0;
+    padding: 0.5ex 1.5ex;
 }
 body.console {}
 body.normal {
-	line-height: 3.2ex;
+    line-height: 3.2ex;
 }
 
 hr { margin: 0.5em 2em; }
 
 a {
-	color: inherit;
+    color: inherit;
 }
 
 .inlineimage {
-	display: none;
+    display: none;
 
-	position: absolute;
-	margin: 0;
-	height: auto;
-	max-width: 200px;
-	max-height: 150px;
-	-webkit-box-shadow: 2px 2px 2px #888;
+    position: absolute;
+    margin: 0;
+    height: auto;
+    max-width: 200px;
+    max-height: 150px;
+    -webkit-box-shadow: 2px 2px 2px #888;
 }
 .message:hover .inlineimage {
     display: inline-block;
@@ -70,17 +70,17 @@ a {
 .message[type=debug_receive] { color: #5e5960; }
 
 .highlight {
-	color: #ca773f;
-	font-weight: normal;
+    color: #ca773f;
+    font-weight: normal;
 }
 
 /* Special spans */
 
 .url {
-	word-break: break-all;
+    word-break: break-all;
 }
 .address {
-	text-decoration: underline; word-break: break-all;
+    text-decoration: underline; word-break: break-all;
 }
 
 /* Messages in main view, but not console */
@@ -89,40 +89,40 @@ body.normal .message { padding-left: 23ex; display: block; }
 /* Spans in line */
 
 body.normal .time {
-	display: block;
-	float: left;
-	width: 6ex;
+    display: block;
+    float: left;
+    width: 6ex;
 }
 
 body.normal .sender,
 body.normal div.line[type=action] .sender:before {
-	display: block;
-	float: left;
-	padding-right: 0.3ex;
-	text-align: right;
-	width: 15ex;
-	height: 3ex;
-	overflow: hidden;
+    display: block;
+    float: left;
+    padding-right: 0.3ex;
+    text-align: right;
+    width: 15ex;
+    height: 3ex;
+    overflow: hidden;
 }
 
 body.normal div.line[type=action] .sender {
-	width: auto;
-	margin-right: 0;
+    width: auto;
+    margin-right: 0;
 }
 
 body.normal div.line[type=action] .sender:after {
-	display: inline;
-	content: "​ ";  /* U+200B ZERO WIDTH SPACE + U+0020 SPACE */
+    display: inline;
+    content: "​ ";  /* U+200B ZERO WIDTH SPACE + U+0020 SPACE */
 }
 
 body.normal div.line[type=action] .sender:before {
-	content: "•";
-	padding-right: 0.3ex;
-	margin-right: 1.5ex;
+    content: "•";
+    padding-right: 0.3ex;
+    margin-right: 1.5ex;
 }
 
 body.normal div.line[type=action] .sender[type=myself]:before {
-	content: "★";
+    content: "★";
 }
 
 .sender[type=normal][colornumber='0'],
@@ -144,9 +144,9 @@ body.normal div.line[type=action] .sender[type=myself]:before {
 
 body.normal .line[highlight=true][type=privmsg] > .sender[type=normal],
 body.normal .line[highlight=true][type=action] > .sender[type=normal]:before {
-	-webkit-border-radius: 3px;
-	line-height:3ex;
-	color: #202020;
+    -webkit-border-radius: 3px;
+    line-height:3ex;
+    color: #202020;
 }
 
 .line[highlight=true][type=privmsg] .sender[type=normal][colornumber='0'],
@@ -183,21 +183,21 @@ body.normal .line[highlight=true][type=action] > .sender[type=normal]:before {
 .line[highlight=true][type=action] .sender[type=normal][colornumber='15']:before { background-color: #eb8798; }
 
 body.normal .sender[type=myself]:after {
-	content: " ★";
-	color: #33c4fa;
+    content: " ★";
+    color: #33c4fa;
 }
 
 body.normal div.line[type=action] .sender[type=myself]:after {
-	content: "​ ";  /* U+200B ZERO WIDTH SPACE + U+0020 SPACE */
+    content: "​ ";  /* U+200B ZERO WIDTH SPACE + U+0020 SPACE */
 }
 
 .line[highlight=true] {
-	background-color: transparent;
+    background-color: transparent;
 }
 
 .line[highlight=true] .highlight {
-	color: #33c4fa;
-	font-weight: bold;
+    color: #33c4fa;
+    font-weight: bold;
 }
 
 /* disable funky mirc colours */
