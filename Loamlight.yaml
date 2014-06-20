@@ -4,12 +4,12 @@
 log-view:
   nickname-format: '%n'
 input-text:
-  font-family: 'Lucida Grande'
+  font-family: 'Helvetica Neue'
   font-size: 12.0
   background-color: '#202020'
   color: '#ffffff'
 member-list:
-  font-family: 'Lucida Grande'
+  font-family: 'Helvetica Neue Medium'
   font-size: 10.0
   color: '#bbb'
   background-color: '#202020'
@@ -24,7 +24,7 @@ member-list:
       top-color: '#222'
       bottom-color: '#222'
 server-tree:
-  font-family: 'Lucida Grande'
+  font-family: 'Helvetica Neue Medium'
   font-size: 10.0
   background-color: '#202020'
   highlight:
