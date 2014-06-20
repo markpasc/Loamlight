@@ -23,10 +23,17 @@ a {
 }
 
 .inlineimage {
-	margin: 10px 20px 15px 0;
+	display: none;
+
+	position: absolute;
+	margin: 0;
+	height: auto;
 	max-width: 200px;
 	max-height: 150px;
 	-webkit-box-shadow: 2px 2px 2px #888;
+}
+.message:hover .inlineimage {
+    display: inline-block;
 }
 
 .line  { padding: 0.2ex 0; }
