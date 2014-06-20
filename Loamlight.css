@@ -1,0 +1,305 @@
+@charset "UTF-8";
+/* **** variables **** */
+/* **** code **** */
+html {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 9pt;
+  background-color: #202020;
+  color: #FFFFFF;
+  padding: 0;
+  margin: 0; }
+
+body {
+  margin: 0;
+  padding: 0.5ex 1.5ex; }
+
+body.normal {
+  line-height: 3.2ex; }
+
+hr {
+  margin: 0.5em 2em; }
+
+a {
+  color: inherit; }
+
+.inlineimage {
+  margin: 0;
+  height: auto;
+  max-width: 200px;
+  max-height: 150px;
+  -webkit-box-shadow: 2px 2px 2px #888; }
+
+.line {
+  padding: 0.2ex 0; }
+
+.time {
+  color: #5F5A60; }
+
+.place {
+  color: #9a703f; }
+
+/* Nicks */
+.sender[type=normal] {
+  color: #c4af75;
+  font-weight: bold;
+  margin-right: 1.5ex; }
+
+.sender[type=myself] {
+  color: #33c4fa;
+  font-weight: bold;
+  margin-right: 1.5ex; }
+
+/* Messages */
+.message[type=privmsg] {
+  color: #FFFFFF; }
+
+.message[type=action] {
+  color: inherit; }
+
+.message[type=notice] {
+  color: #daefa3; }
+
+.message[type=system] {
+  color: #808080; }
+
+.message[type=error] {
+  color: #ca773f;
+  font-weight: bold; }
+
+.message[type=reply] {
+  color: #f9ed97; }
+
+.message[type=error_reply] {
+  color: #e3c59c; }
+
+.message[type=dcc_send_send] {
+  color: #5e5960; }
+
+.message[type=dcc_send_receive] {
+  color: #5e5960; }
+
+.message[type=join] {
+  color: #5e5960; }
+
+.message[type=part] {
+  color: #5e5960; }
+
+.message[type=quit] {
+  color: #5e5960; }
+
+.message[type=kick] {
+  color: #899a95; }
+
+.message[type=kill] {
+  color: #899a95; }
+
+.message[type=nick] {
+  color: #5e5960; }
+
+.message[type=mode] {
+  color: #8e9c69; }
+
+.message[type=topic] {
+  color: #8e9c69; }
+
+.message[type=invite] {
+  color: #daefa3;
+  font-style: italic; }
+
+.message[type=wallops] {
+  color: #5e5960; }
+
+.message[type=debug_send] {
+  color: #5e5960; }
+
+.message[type=debug_receive] {
+  color: #5e5960; }
+
+.highlight {
+  color: #ca773f;
+  font-weight: normal; }
+
+/* Special spans */
+.url {
+  word-break: break-all; }
+
+.address {
+  text-decoration: underline;
+  word-break: break-all; }
+
+/* Messages in main view, but not console */
+body.normal .message {
+  padding-left: 23ex;
+  display: block; }
+
+/* Spans in line */
+body.normal .time {
+  display: block;
+  float: left;
+  width: 6ex; }
+
+body.normal .sender,
+body.normal div.line[type=action] .sender:before {
+  display: block;
+  float: left;
+  padding-right: 0.3ex;
+  text-align: right;
+  width: 15ex;
+  height: 3ex;
+  overflow: hidden; }
+
+body.normal div.line[type=action] .sender {
+  width: auto;
+  margin-right: 0; }
+
+body.normal div.line[type=action] .sender:after {
+  display: inline;
+  content: "​ ";
+  /* U+200B ZERO WIDTH SPACE + U+0020 SPACE */ }
+
+body.normal div.line[type=action] .sender:before {
+  content: "•";
+  padding-right: 0.3ex;
+  margin-right: 1.5ex; }
+
+body.normal div.line[type=action] .sender[type=myself]:before {
+  content: "★"; }
+
+.sender[type=normal][colornumber='0'] {
+  color: #feae0e; }
+
+.sender[type=normal][colornumber='1'] {
+  color: #dc574f; }
+
+.sender[type=normal][colornumber='2'] {
+  color: #ffedbf; }
+
+.sender[type=normal][colornumber='3'] {
+  color: #bd61a5; }
+
+.sender[type=normal][colornumber='4'] {
+  color: #3d9870; }
+
+.sender[type=normal][colornumber='5'] {
+  color: #26a7c6; }
+
+.sender[type=normal][colornumber='6'] {
+  color: #afce2f; }
+
+.sender[type=normal][colornumber='7'] {
+  color: #ffba8a; }
+
+.sender[type=normal][colornumber='8'] {
+  color: #00dc49; }
+
+.sender[type=normal][colornumber='9'] {
+  color: #92fcfe; }
+
+.sender[type=normal][colornumber='10'] {
+  color: #f1ee4f; }
+
+.sender[type=normal][colornumber='11'] {
+  color: #f2872f; }
+
+.sender[type=normal][colornumber='12'] {
+  color: #fc6433; }
+
+.sender[type=normal][colornumber='13'] {
+  color: #f0f0f0; }
+
+.sender[type=normal][colornumber='14'] {
+  color: #9c749b; }
+
+.sender[type=normal][colornumber='15'] {
+  color: #eb8798; }
+
+body.normal .line[highlight=true][type=privmsg] > .sender[type=normal],
+body.normal .line[highlight=true][type=action] > .sender[type=normal]:before {
+  -webkit-border-radius: 3px;
+  line-height: 3ex;
+  color: #202020; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='0'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='0']:before {
+  background-color: #feae0e; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='1'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='1']:before {
+  background-color: #dc574f; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='2'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='2']:before {
+  background-color: #ffedbf; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='3'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='3']:before {
+  background-color: #bd61a5; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='4'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='4']:before {
+  background-color: #3d9870; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='5'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='5']:before {
+  background-color: #26a7c6; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='6'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='6']:before {
+  background-color: #afce2f; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='7'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='7']:before {
+  background-color: #ffba8a; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='8'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='8']:before {
+  background-color: #00dc49; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='9'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='9']:before {
+  background-color: #92fcfe; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='10'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='10']:before {
+  background-color: #f1ee4f; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='11'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='11']:before {
+  background-color: #f2872f; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='12'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='12']:before {
+  background-color: #fc6433; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='13'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='13']:before {
+  background-color: #f0f0f0; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='14'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='14']:before {
+  background-color: #9c749b; }
+
+.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='15'],
+.line[highlight=true][type=action] .sender[type=normal][colornumber='15']:before {
+  background-color: #eb8798; }
+
+body.normal .sender[type=myself]:after {
+  content: " ★";
+  color: #33c4fa; }
+
+body.normal div.line[type=action] .sender[type=myself]:after {
+  content: "​ ";
+  /* U+200B ZERO WIDTH SPACE + U+0020 SPACE */ }
+
+.line[highlight=true] {
+  background-color: transparent; }
+
+.line[highlight=true] .highlight {
+  color: #33c4fa;
+  font-weight: bold; }
+
+/* disable funky mirc colours */
+.effect[color-number] {
+  color: inherit;
+  background-color: inherit;
+  font-style: italic; }
