@@ -1,5 +1,19 @@
+/* **** variables **** */
+
+$font: "Lucida Grande", sans-serif;
+
+$inline-images-on-hover: false;
+
+$my-sender-color: #33c4fa;
+
+$sender-colors: (#feae0e #dc574f #ffedbf #bd61a5 #3d9870 #26a7c6 #afce2f #ffba8a
+                 #00dc49 #92fcfe #f1ee4f #f2872f #fc6433 #f0f0f0 #9c749b #eb8798);
+
+
+/* **** code **** */
+
 html {
-    font-family: "Lucida Grande", sans-serif;
+    font-family: $font;
     font-size: 9pt;
     background-color: #202020;
     color: #FFFFFF;
@@ -23,17 +37,20 @@ a {
 }
 
 .inlineimage {
-    display: none;
-
-    position: absolute;
+    @if $inline-images-on-hover {
+        display: none;
+        position: absolute;
+    }
     margin: 0;
     height: auto;
     max-width: 200px;
     max-height: 150px;
     -webkit-box-shadow: 2px 2px 2px #888;
 }
-.message:hover .inlineimage {
-    display: inline-block;
+@if $inline-images-on-hover {
+    .message:hover .inlineimage {
+        display: inline-block;
+    }
 }
 
 .line  { padding: 0.2ex 0; }
@@ -43,7 +60,7 @@ a {
 /* Nicks */
 
 .sender[type=normal] { color: #c4af75; font-weight: bold; margin-right: 1.5ex; }
-.sender[type=myself] { color: #33c4fa; font-weight: bold; margin-right: 1.5ex; }
+.sender[type=myself] { color: $my-sender-color; font-weight: bold; margin-right: 1.5ex; }
 
 /* Messages */
 
@@ -125,22 +142,9 @@ body.normal div.line[type=action] .sender[type=myself]:before {
     content: "★";
 }
 
-.sender[type=normal][colornumber='0'],
-.sender[type=normal][colornumber='8'] { color: #00dc49; }
-.sender[type=normal][colornumber='1'],
-.sender[type=normal][colornumber='9'] { color: #92fcfe; }
-.sender[type=normal][colornumber='2'],
-.sender[type=normal][colornumber='10'] { color: #f1ee4f; }
-.sender[type=normal][colornumber='3'],
-.sender[type=normal][colornumber='11'] { color: #f2872f; }
-.sender[type=normal][colornumber='4'],
-.sender[type=normal][colornumber='12'] { color: #fc6433; }
-.sender[type=normal][colornumber='5'],
-.sender[type=normal][colornumber='13'] { color: #f0f0f0; }
-.sender[type=normal][colornumber='6'],
-.sender[type=normal][colornumber='14'] { color: #9c749b; }
-.sender[type=normal][colornumber='7'],
-.sender[type=normal][colornumber='15'] { color: #eb8798; }
+@for $i from 0 through 15 {
+    .sender[type=normal][colornumber='#{$i}'] { color: nth($sender-colors, $i+1); }
+}
 
 body.normal .line[highlight=true][type=privmsg] > .sender[type=normal],
 body.normal .line[highlight=true][type=action] > .sender[type=normal]:before {
@@ -149,42 +153,16 @@ body.normal .line[highlight=true][type=action] > .sender[type=normal]:before {
     color: #202020;
 }
 
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='0'],
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='8'] { background-color: #00dc49; }
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='1'],
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='9'] { background-color: #92fcfe; }
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='2'],
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='10'] { background-color: #f1ee4f; }
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='3'],
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='11'] { background-color: #f2872f; }
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='4'],
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='12'] { background-color: #fc6433; }
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='5'],
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='13'] { background-color: #f0f0f0; }
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='6'],
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='14'] { background-color: #9c749b; }
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='7'],
-.line[highlight=true][type=privmsg] .sender[type=normal][colornumber='15'] { background-color: #eb8798; }
-.line[highlight=true][type=action] .sender[type=normal][colornumber='0']:before,
-.line[highlight=true][type=action] .sender[type=normal][colornumber='8']:before { background-color: #00dc49; }
-.line[highlight=true][type=action] .sender[type=normal][colornumber='1']:before,
-.line[highlight=true][type=action] .sender[type=normal][colornumber='9']:before { background-color: #92fcfe; }
-.line[highlight=true][type=action] .sender[type=normal][colornumber='2']:before,
-.line[highlight=true][type=action] .sender[type=normal][colornumber='10']:before { background-color: #f1ee4f; }
-.line[highlight=true][type=action] .sender[type=normal][colornumber='3']:before,
-.line[highlight=true][type=action] .sender[type=normal][colornumber='11']:before { background-color: #f2872f; }
-.line[highlight=true][type=action] .sender[type=normal][colornumber='4']:before,
-.line[highlight=true][type=action] .sender[type=normal][colornumber='12']:before { background-color: #fc6433; }
-.line[highlight=true][type=action] .sender[type=normal][colornumber='5']:before,
-.line[highlight=true][type=action] .sender[type=normal][colornumber='13']:before { background-color: #f0f0f0; }
-.line[highlight=true][type=action] .sender[type=normal][colornumber='6']:before,
-.line[highlight=true][type=action] .sender[type=normal][colornumber='14']:before { background-color: #9c749b; }
-.line[highlight=true][type=action] .sender[type=normal][colornumber='7']:before,
-.line[highlight=true][type=action] .sender[type=normal][colornumber='15']:before { background-color: #eb8798; }
+@for $i from 0 through 15 {
+    .line[highlight=true][type=privmsg] .sender[type=normal][colornumber='#{$i}'],
+    .line[highlight=true][type=action] .sender[type=normal][colornumber='#{$i}']:before {
+        background-color: nth($sender-colors, $i+1);
+    }
+}
 
 body.normal .sender[type=myself]:after {
     content: " ★";
-    color: #33c4fa;
+    color: $my-sender-color;
 }
 
 body.normal div.line[type=action] .sender[type=myself]:after {
@@ -196,7 +174,7 @@ body.normal div.line[type=action] .sender[type=myself]:after {
 }
 
 .line[highlight=true] .highlight {
-    color: #33c4fa;
+    color: $my-sender-color;
     font-weight: bold;
 }
 
